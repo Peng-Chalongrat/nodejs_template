@@ -2,7 +2,7 @@ const router = require('express').Router();
 const db = require('../connection/database');
 
 router.post('/login', (req, res) => {
-    let sql = 'SELECT * FROM users_info';
+    let sql = 'SELECT * FROM user';
     db.query(sql, (err, result) => {
         if (err) {
             return res.status(500).json({
